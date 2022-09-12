@@ -2,11 +2,15 @@
 
     background: #111518;
 
-     &__pisya {
+     &__point {
         
     justify-content: center;
     width: 100%;
     padding-bottom: 500px;
+
+    @media screen and (min-width: 768px) {
+    padding-bottom: 380px;    
+    }
      }
 
     &__title{
@@ -22,11 +26,49 @@
     letter-spacing: 0.03em;
     
     color: #FFFFFF;
+    
+    @media screen and (min-width: 768px) {
+    text-align: left; 
     }
+}
 
     &__line {
-        position: absolute;
-        margin-left: 3.5px;
+        
+        &-top {
+            position: absolute;
+            margin-left: 4.4px;
+            width: 1px;
+            height: 380px;
+            border-left: 1px solid #ffffff;
+
+            @media screen and (min-width: 768px) {
+                height: 270px;
+            }
+        }
+
+        &-center {
+            position: absolute;
+            margin-left: 4.4px;
+            height: 380px;
+            border-left: 1px solid #ffffff;
+
+            @media screen and (min-width: 768px) {
+                
+            }
+        }
+
+        &-bottom {
+            border-left: 1px solid #ffffff;
+            height: 740px;
+            position: absolute;
+            margin-left: 4.4px;
+            max-width: 1px; 
+
+            @media screen and (min-width: 768px) {
+                height: 420px;    
+            }
+        }
+
     }
 
     &__list {
@@ -35,6 +77,21 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+    max-width: 768px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;  
+    }
+    }
+
+    &__flexible {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
     }
 
     &__item {
@@ -59,11 +116,24 @@
         text-transform: uppercase;
         margin-left: 25px;
         color: #FFFFFF;
+
+        @media screen and (min-width: 768px) {
+        margin-left: 55px; 
+        margin-bottom: 5px;    
+        }
     }
 
     &__unit {
 
         margin-bottom: 8px;
+        
+        @media screen and (min-width: 768px) {
+        width: 176px;
+
+            &:not(:last-child){
+            margin-right: 50px;
+            }
+        }
 
         &-title {
             font-family: 'Montserrat';
@@ -71,7 +141,6 @@
             font-weight: 700;
             font-size: 12px;
             line-height: 164.9%;
-            /* or 20px */
             
             display: flex;
             align-items: center;
@@ -79,6 +148,10 @@
             margin-left: 25px;
             margin-bottom: 5px;
             color: #FF6B09;
+
+            @media screen and (min-width: 768px) {
+            margin-bottom: 5px;    
+            }
         }
 
         &-info {
@@ -104,16 +177,21 @@
     }
 
     &__bg {
-        position: absolute;
-        width: 176px;
-        height: 137px;
-    }
+    position: absolute;
+    width: 120px;
+    height: 137px;
+    transform: translate(90%, -30%);
+    opacity: 0.5;
+    background-image: url(../images/classroom-320.jpg);
+    background-repeat: no-repeat;
 
-    &__img {
-        width: 135px;
-        height: 137px;
-        transform: translate(70%, -30%);
-        opacity: 0.5;
+    @media screen and (min-width: 768px) {
+    width: 383px;
+    height: 280px;
+    transform: translate(90%, -50%);
+    background-image: url(../images/classroom.jpg);
+
+    }
     }
 
 }
